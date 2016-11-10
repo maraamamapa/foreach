@@ -1,21 +1,14 @@
 <?php
-//FOR
-echo "La tabla de multiplicar del 5"."<br>";
-for ( $i = 0 ; $i <= 10 ; $i ++) {
-echo "5x$i=". $i*5 ."<br>" ;
+
+$tablas=array("primera"=>5,"segunda"=>13,"tercera"=>11,);
+
+foreach ($tablas as $indice => $valor) {
+  echo " Tabla del $valor :"."<br>";
+
+//Se recogen los elementos del array,se crea un bucle for para que saque los 
+  for ($i=1; $i <=10 ; $i++) {
+      $operacion= $i * $valor;
+      echo  "$valor x $i =". $operacion."<br>";
+    }
 }
-//FOREACH
-echo "Visualización del array con foreach:"."<br>";
-$tablas =array("primera"=>5,"segunda"=>13,"tercera"=>11);
-					
-		
-mostrarTablas($tablas);   
-
-
-function mostrarTablas($tablas){
-	foreach ($tablas as $indice => $valor) {
-        echo ("$indice : $valor<br>") ;
-		}
-	} 
-
-?>
+ ?>
